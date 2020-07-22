@@ -44,5 +44,10 @@ module.exports = {
         "sessions",
         {user, address}
     ),
-    getSession: id => request("GET", `sessions/${encodeURIComponent(id)}`)
+    getSession: id => request("GET", `sessions/${encodeURIComponent(id)}`),
+    getSessionIdFromToken: async token => (await request(
+        "POST",
+        "sessions/token",
+        {token}
+    )).id
 };
