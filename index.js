@@ -28,5 +28,10 @@ module.exports = {
         "POST",
         `users/${encodeURIComponent(id)}/reputation`,
         {score}
-    )
+    ),
+    checkPassword: async (id, password) => (await request(
+        "POST",
+        `users/${encodeURIComponent(id)}/password/verify`,
+        {password}
+    )).matches
 };
