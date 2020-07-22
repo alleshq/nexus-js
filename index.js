@@ -17,5 +17,9 @@ module.exports = {
         name,
         nickname,
         password
+    }),
+    nametag: (name, tag) => request("GET", "nametag", {
+        name,
+        tag
     })
 };
