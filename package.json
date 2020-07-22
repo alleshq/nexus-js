@@ -1,0 +1,9 @@
+{
+  "name": "@alleshq/nexus",
+  "version": "1.0.0",
+  "description": "A client for the Nexus API",
+  "main": "index.js",
+  "repository": "https://github.com/alleshq/nexus-js",
+  "license": "MIT",
+  "private": false
+}
