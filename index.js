@@ -21,5 +21,6 @@ module.exports = {
     nametag: (name, tag) => request("GET", "nametag", {
         name,
         tag
-    })
+    }),
+    getUser: id => request("GET", `users/${encodeURIComponent(id)}`)
 };
