@@ -6,7 +6,7 @@ let auth = {
 
 const request = async (method, endpoint, data) => (await axios({
     method,
-    url: `http://localhost:8080/${endpoint}`,
+    url: `https://nexus.alles.cx/${endpoint}`,
     data,
     auth
 })).data;
