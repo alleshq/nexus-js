@@ -43,5 +43,6 @@ module.exports = {
         "POST",
         "sessions",
         {user, address}
-    )
+    ),
+    getSession: id => request("GET", `sessions/${encodeURIComponent(id)}`)
 };
