@@ -33,5 +33,10 @@ module.exports = {
         "POST",
         `users/${encodeURIComponent(id)}/password/verify`,
         {password}
+    )).matches,
+    setPassword: async (id, password) => (await request(
+        "POST",
+        `users/${encodeURIComponent(id)}/password`,
+        {password}
     )).matches
 };
