@@ -23,5 +23,10 @@ module.exports = {
         tag
     }),
     getUser: id => request("GET", `users/${encodeURIComponent(id)}`),
-    setUser: (id, data) => request("POST", `users/${encodeURIComponent(id)}`, data)
+    setUser: (id, data) => request("POST", `users/${encodeURIComponent(id)}`, data),
+    addReputation: (id, score) => request(
+        "POST",
+        `users/${encodeURIComponent(id)}/reputation`,
+        {score}
+    )
 };
