@@ -38,5 +38,10 @@ module.exports = {
         "POST",
         `users/${encodeURIComponent(id)}/password`,
         {password}
-    )).matches
+    )).matches,
+    createSession: (user, address) => request(
+        "POST",
+        "sessions",
+        {user, address}
+    )
 };
