@@ -12,5 +12,10 @@ const request = async (method, endpoint, data) => (await axios({
 })).data;
 
 module.exports = {
-    setCredentials: (username, password) => auth = {username, password}
+    setCredentials: (username, password) => auth = {username, password},
+    createUser: (name, nickname, password) => request("POST", "users", {
+        name,
+        nickname,
+        password
+    })
 };
