@@ -18,10 +18,10 @@ module.exports = {
         nickname,
         password
     }),
-    nametag: (name, tag) => request("GET", "nametag", {
-        name,
-        tag
-    }),
+    nametag: (name, tag) => request(
+        "GET",
+        `nametag?name=${encodeURIComponent(name)}&tag=${encodeURIComponent(tag)}`
+    ),
     getUser: id => request("GET", `users/${encodeURIComponent(id)}`),
     setUser: (id, data) => request("POST", `users/${encodeURIComponent(id)}`, data),
     addReputation: (id, score) => request(
