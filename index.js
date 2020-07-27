@@ -29,6 +29,11 @@ module.exports = {
         `users/${encodeURIComponent(id)}/reputation`,
         {score}
     ),
+    addReputation: (id, xp) => request(
+        "POST",
+        `users/${encodeURIComponent(id)}/xp`,
+        {xp}
+    ),
     checkPassword: async (id, password) => (await request(
         "POST",
         `users/${encodeURIComponent(id)}/password/verify`,
