@@ -29,7 +29,7 @@ module.exports = {
         `users/${encodeURIComponent(id)}/reputation`,
         {score}
     ),
-    addReputation: (id, xp) => request(
+    addXp: (id, xp) => request(
         "POST",
         `users/${encodeURIComponent(id)}/xp`,
         {xp}
